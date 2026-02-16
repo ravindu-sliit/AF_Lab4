@@ -13,7 +13,7 @@ fs.readFile('file.txt', 'utf8', function (err, data) {
 });
 
 
-fs.writeFile('file.txt', 'Hello World!', function (err) {
+fs.writeFile('file.txt', 'Hello Sri Lanka!', function (err) {
  if (err) throw err;
  console.log('File saved!');
 });
