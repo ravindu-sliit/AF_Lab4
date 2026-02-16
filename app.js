@@ -7,6 +7,12 @@ fs.readFile('file.txt', 'utf8', function (err, data) {
   console.log(data);
 });
 
+fs.readFile('file.txt', 'utf8', function (err, data) {
+  if (err) throw err;
+  console.log(data);
+});
+
+
 fs.writeFile('file.txt', 'Hello World!', function (err) {
  if (err) throw err;
  console.log('File saved!');
@@ -53,3 +59,18 @@ const myPromise = new Promise((resolve, reject) => {
 myPromise
   .then(result => console.log(result))
   .catch(error => console.log(error));
+
+const asyncPromise = new Promise(resolve => {
+  setTimeout(() => resolve("Async/Await Success!"), 1000);
+});
+
+async function myFunction() {
+  try {
+    const result = await asyncPromise;
+    console.log(result);
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+myFunction();
